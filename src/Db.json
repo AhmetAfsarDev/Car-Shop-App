@@ -1,0 +1,44 @@
+[
+    
+    {
+        "id":1,
+        "carimgdata": "./public/Audia3.png",
+        "brandlogoimgdata":"./public/Logo.png",
+        "carbranddata":"Audi",
+        "carmodeldata":"A3",
+        "yeardata":2010,
+        "carcolordata":"Siyah",
+        "Pricedata":"5.000.000 TL"
+    },
+    {
+        "id":2,
+         "carimgdata": "./public/Fordmustang.png",
+        "brandlogoimgdata":"./public/Logo.png",
+        "carbranddata":"Ford",
+        "carmodeldata":"Mustang",
+        "yeardata":2018,
+        "carcolordata":"Siyah",
+        "Pricedata":"15.000.000 TL"
+    },
+       {
+        "id":3,
+         "carimgdata": "./public/Car1.png",
+        "brandlogoimgdata":"./public/Logo.png",
+        "carbranddata":"Honda",
+        "carmodeldata":"Civic",
+        "yeardata":2020,
+        "carcolordata":"Beyaz",
+        "Pricedata":"3.000.000 TL"
+    },
+       {
+        "id":4,
+         "carimgdata": "./public/Car2.png",
+        "brandlogoimgdata":"./public/Logo.png",
+        "carbranddata":"Honda",
+        "carmodeldata":"Civic",
+        "yeardata":2015,
+        "carcolordata":"Beyaz",
+        "Pricedata":"2.000.000 TL"
+    }
+ 
+]

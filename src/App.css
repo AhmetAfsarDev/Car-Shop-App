@@ -1,0 +1,377 @@
+:root {
+  /* --- 1. İmza (Brand) Renkleri --- */
+  --brand-primary: #F4F4F5;       
+  --brand-primary-hover: #E4E4E7; 
+  --brand-accent: #C5A368;        
+
+  /* --- 2. Arka Plan (Background) Renkleri --- */
+  --bg-base: #09090B;             
+  --bg-surface: #141416;          
+  --bg-surface-hover: #1F1F23;    
+
+  /* --- 3. Metin (Typography) Renkleri --- */
+  --text-primary: #F4F4F5;        /* DÜZELTME: Koyu arka planda okunabilirlik için açık renk yapıldı */
+  --text-secondary: #A1A1AA;      
+  --text-muted: #52525B;          
+
+  /* --- 4. Sınırlar ve Odaklanma (Borders & Shadows) --- */
+  --border-subtle: #222226;       
+  --ring-focus: rgba(197, 163, 104, 0.3); 
+
+  /* --- 5. Durum (Semantic) Renkleri --- */
+  --color-success: #10B981;       
+  --color-error: #E11D48;         
+  --color-warning: #D97706;       
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--text-primary); /* Varsayılan metin rengi root'tan çekildi */
+}
+
+body {
+  background-color: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* --- GENEL KONTEYNERLER --- */
+.Main-content, .Content, .Home-Page, .Adress-Page, .Business-page, .Information-Page, .Model-Page {
+  width: 100%;
+  min-width: 1500px;
+  max-width: 1500px; /* Çok büyük ekranlarda aşırı uzamayı engeller */
+  min-height: 80vh;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Model-Page{
+  box-shadow: 1px 1px 20px 3px var(--brand-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- HEADER (MENÜ) --- */
+.Header {
+  width: 100%;
+  min-width: 1700px;
+  max-width: 1700px;
+  height: auto;
+  min-height: 5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(20, 20, 22, 0.85); /* Hafif saydamlık */
+  backdrop-filter: blur(12px); /* Premium cam efekti */
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 1rem;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Zarif gölge */
+}
+
+.Logo {
+  width: 3.5rem;
+  height: 4rem;
+  object-fit: contain;
+}
+
+.Header ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.Header ul li {
+  border-radius: 0.5rem;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.Header ul li a {
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.Header ul li:hover {
+  background-color: var(--bg-surface-hover);
+  border: 1px solid var(--border-subtle);
+  transform: translateY(-2px); /* Scale yerine daha zarif bir yukarı kalkma efekti */
+}
+
+.Header ul li:hover a {
+  color: var(--brand-accent);
+}
+
+/* --- SAYFA İÇERİK KAPSAYICILARI --- */
+.Home-container, .Adress-container, .Business-container, .Information-container {
+  width: 100%;
+  min-width: 1500px;
+  max-width: 1500px;
+  background-color: var(--bg-surface);
+  border-radius: 1rem;
+  border: 1px solid var(--border-subtle);
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--brand-accent) var(--bg-surface);
+}
+.Home-Page
+{
+ border-radius: 0.5rem;
+
+}
+.Home-Page img 
+{
+ border-radius: 0.5rem;
+  min-width: 1491px;
+
+
+}
+.Home-container
+{
+ border-radius: 0.5rem;
+}
+/* --- ADRES KARTLARI --- */
+.Adress-card {
+  width: 100%;
+  background-color: var(--bg-base);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.Adress-card:hover {
+  border-color: var(--brand-accent);
+}
+
+.Adress-card a {
+  color: var(--brand-accent);
+}
+
+/* --- İŞ (BUSINESS) SAYFASI --- */
+.Business-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: start;
+  min-width: 1500px;
+}
+
+.Business-container span {
+  display: inline-block;
+  color: var(--text-primary);
+  padding: 1rem 2rem;
+  background-color: var(--bg-base);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  max-width: 700px;
+  text-align: center;
+}
+
+.Business-container span:hover {
+  transform: translateY(-3px);
+  border-color: var(--brand-accent);
+}
+
+.Business-image-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.Business-image-container img {
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 1px solid var(--border-subtle);
+}
+.Logocontainer ul li 
+{
+  cursor:pointer;
+}
+/* --- ARAÇ MODELLERİ (CAR MODELS) --- */
+.navbar {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:1rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1.5px 10px 2px var(--brand-accent);
+}
+
+.navbar input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 2rem;
+  color: var(--brand-accent);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar input:focus {
+  outline: none;
+  border-color: var(--brand-accent);
+  box-shadow: 0 0 0 3px var(--ring-focus);
+}
+
+.carmodelcontainer {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.carcard {
+  width: 100%;
+  background-color: var(--bg-surface);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border: 1px solid var(--border-subtle);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 70rem;
+}
+
+.carcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(197, 163, 104, 0.1);
+  border-color: var(--brand-accent);
+}
+
+.carimg {
+  width: 100%;
+  min-width: 20rem;
+  max-width: 30rem;
+  min-height: 10rem;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.carinfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.carinfo span {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--brand-accent);
+  color: var(--brand-accent);
+  font-size: 1.3rem;
+  font-weight: 500;
+  display: inline-block;
+  width: fit-content;
+  min-width: 20rem;
+  max-width: 20rem;
+}
+.Brandlogo
+{
+  width:10rem;
+  height:10rem;
+}
+.Brandlogoimg
+{
+  width:10rem;
+  height:10rem;
+}
+
+/* --- MEDYA SORGULARI (RESPONSIVE TASARIM) --- */
+
+/* Tablet Ekranlar için (1024px ve altı) */
+@media screen and (max-width: 1024px) {
+  .Header ul {
+    gap: 1rem;
+  }
+  
+  .carcard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carinfo {
+    align-items: center;
+  }
+}
+
+/* Mobil Ekranlar için (768px ve altı) */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .Header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .Header ul {
+    gap: 0.5rem;
+  }
+
+  .Header ul li {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .Home-container, .Adress-container, .Business-container, .Information-container {
+    padding: 1rem;
+  }
+
+  .Business-image-container {
+    justify-content: center;
+  }
+
+  .carimg {
+    max-width: 100%;
+  }
+
+  .carinfo span {
+    width: 100%; /* Mobilde rozetler tam genişlik kaplasın */
+    text-align: center;
+  }
+}
